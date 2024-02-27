@@ -1,6 +1,6 @@
 import profilePicture from './assets/profile-picture.png';
 import './App.css';
-import { Post } from './components/Post';
+import { Post } from './components/Post/Post';
 
 function App() {
   const post = {

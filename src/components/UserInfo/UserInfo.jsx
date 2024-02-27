@@ -1,8 +1,8 @@
-import React from 'react';
+import styles from './UserInfo.module.scss';
 
 const UserInfo = ({ fullName, avatar }) => {
   return (
-    <div>
+    <div className={styles.userInfo}>
       <h2>{fullName}</h2>
       <img
         src={avatar}

@@ -1,14 +1,11 @@
-import React from 'react';
-import UserInfo from './UserInfo';
-import stringDate from '../utilities/stringDate';
+import UserInfo from '../UserInfo/UserInfo';
+import stringDate from '../../utilities/stringDate';
+import styles from './CommentSection.module.scss';
 
 const CommentSection = ({ comments, displayComments }) => {
   const allComments = comments.map((comment, index) => {
     return (
-      <div
-        className='comment'
-        key={index}
-      >
+      <div key={index}>
         <p>
           {comment.content}
           <br />
@@ -22,7 +19,10 @@ const CommentSection = ({ comments, displayComments }) => {
     );
   });
   return (
-    <div style={{ display: displayComments ? 'block' : 'none' }}>
+    <div
+      className={styles.comment}
+      style={{ display: displayComments ? 'block' : 'none' }}
+    >
       {allComments}
     </div>
   );
